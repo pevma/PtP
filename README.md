@@ -70,14 +70,16 @@ What's the point
  would never go undetected by your IDS using any protocol(http,tcp,udp,icmp,ipv4,ipv6,vlan or QinQ) 
  and/or as a packet payload in those protocol combinations with different  fragmentation/TCP seq number weirdness ?
  
- Then this script comes handy because it generates over 1000 pcap/rule pair cases that you can test with(just from that one HTTP request)
+ Then this script comes handy because it generates over 1000 pcap/rule pair cases that you can test with(just from that one HTTP request).
  
 ========================
 What/how does it do (it)
 ========================
 
 It reads in a pcap file ->
+
 runs through it and extracts the HTTP requests with disregard of checksums(only GET,POST,PUT,HEAD) ->
+
 based on that HTTP request packet and its load, it creates over 1000 pcap/rule pair combinations ->
 
 Full sessions,midstream sessions,pseudo/simulated sessions,fragmented, TCP seq overspill,
