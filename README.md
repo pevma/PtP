@@ -147,11 +147,14 @@ REMOVE your current scapy installation
 (if you have already installed the default repo version for your OS)
 
 Requirement 1 ->
+
 Python 2.7.x , Tshark, Scapy (latest dev), Python Yaml:
      apt-get install python2.7 python2.7-dev tshark python-yaml
      sudo yum install PyYAML (on CentOS/Fedora/RedHat)
 
+
 Requirement 2 ->
+
 Scapy dev:
      apt-get install hg-fast-export
      hg clone http://hg.secdev.org/scapy-com
@@ -161,10 +164,10 @@ Scapy dev:
 Possible usage
 ==============
 
-1)
-Run a full Nikto http scan against a web server and save the pcap of the run.
-2)
-Runt the script to create the test cases.
+1) Run a full Nikto http scan against a web server and save the pcap of the run.
+
+2) Runt the script to create the test cases.
+
 
 NOTE:
 -----
