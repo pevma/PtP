@@ -118,10 +118,13 @@ Features
 ========
 
 It is multi-threading :)
+
 So it scales to the number of cores you have on the server/PC you are running it on.
 This comes in handy when you want to create  millions of tests cases.
 
+
 Uses yaml as a configuration :)
+
 The configuration file is PacifyConfig.yaml.
 From there you can tune the multi-threading and chose which pcap/rule combinations
 will be created.
