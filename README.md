@@ -141,7 +141,7 @@ REMOVE your current scapy installation
 Requirement 1 ->
 Python 2.7.x , Tshark, Scapy (latest dev), Python Yaml:
 apt-get install python2.7 python2.7-dev tshark python-yaml
-#sudo yum install PyYAML (on CentOS/Fedora/RedHat)
+sudo yum install PyYAML (on CentOS/Fedora/RedHat)
 
 Requirement 2 ->
 Scapy dev:
@@ -168,9 +168,7 @@ The time it will take is CPU number and speed plus HDD speed dependent.
 Run it
 ======
 
-Example:
-
-python PacifyThePcap.py
+EXAMPLE: python PacifyThePcap.py
 
 WARNING: No route found for IPv6 destination :: (no default route?)
 ['PacifyThePcap.py']
