@@ -1,0 +1,105 @@
+%YAML 1.1
+---
+
+
+##                                       ##
+# Author: Peter Manev                     #
+# peter.manev@openinfosecfoundation.org   #
+##                                       ##
+
+
+#This is the config file for PacifyThePcap tool.
+
+#You need
+#"sudo apt-get install python-yaml"
+#"sudo yum install PyYAML" (on CentOS/Fedora/RedHat)
+#!!!! -- for the script to work --!!!!
+
+
+# Bellow we set up the number of threads(multiprocesses in Python)
+# The default is "auto" - meaning it will create one process per CPU,
+# either physical and/or logical. If you have 8 cores it will start 8 threads.
+#
+# Also we set up the "chunks" size - "auto" by default , meaning that it 
+# will read/rewrite 5 http requests, from the provided (at the command line) 
+# pcap, at a time per process/thread - this is the default.
+# Please have in mind that loading 50MB pcap with scpay actually takes about 
+# 1.5GB of memory !
+
+Threads:
+  number_of_threads: auto
+  chunks: auto
+
+
+# Here we start with the per protocol enabled config settings.
+# only "yes" and "no" allowed  as options !!
+# Enable or not the following:
+
+Protocols:
+    HTTP:
+      IPv4: yes
+      IPv6: yes
+      WriteRule: yes
+      
+      Session:
+          Session: yes
+          ExtraTcpSA: yes
+          SeqOverspill: yes
+          Dot1Q: yes
+          QinQ: yes
+      
+      Midstream:
+          Midstream: yes
+          Dot1Q: yes
+          QinQ: yes
+    
+    
+    TCP:
+      IPv4: yes
+      IPv6: yes
+      WriteRule: yes
+      
+      Session:
+          Session: yes
+          ExtraTcpSA: yes
+          SeqOverspill: yes
+          Dot1Q: yes
+          QinQ: yes
+      
+      Midstream:
+          Midstream: yes
+          Dot1Q: yes
+          QinQ: yes
+    
+    
+    UDP:
+      IPv4: yes
+      IPv6: yes
+      WriteRule: yes
+      
+      PseudoSession:
+          PseudoSession: yes
+          Dot1Q: yes
+          QinQ: yes
+      
+      PseudoMidstream:
+          PseudoMidstream: yes
+          Dot1Q: yes
+          QinQ: yes
+    
+    ICMP:
+      IPv4: yes
+      IPv6: yes
+      WriteRule: yes
+      
+      PseudoSession:
+          PseudoSession: yes
+          Dot1Q: yes
+          QinQ: yes
+      
+      PseudoMidstream:
+          PseudoMidstream: yes
+          Dot1Q: yes
+          QinQ: yes
+
+
