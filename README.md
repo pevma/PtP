@@ -60,10 +60,12 @@ What's the point
 ================
  
  How about if you want to be sure and confirm that this HTTP request:
-      http://www.PROD-WEBSERVER-NAME-HERE.com/modules.php?name=Members_List&letter='%20OR%20pass%20LIKE%20'a%25'/* 
+ 
+     http://www.PROD-WEBSERVER-NAME-HERE.com/modules.php?name=Members_List&letter='%20OR%20pass%20LIKE%20'a%25'/* 
 
  Or the request itself:
-      GET /modules.php?name=Members_List&letter='%20OR%20pass%20LIKE%20'a%25'/* HTTP/1.1\r\n
+ 
+     GET /modules.php?name=Members_List&letter='%20OR%20pass%20LIKE%20'a%25'/* HTTP/1.1\r\n
  
  would never go undetected by your IDS using any protocol(http,tcp,udp,icmp,ipv4,ipv6,vlan or QinQ) 
  and/or as a packet payload in those protocol combinations with different  fragmentation/TCP seq number weirdness ?
@@ -93,6 +95,7 @@ That however is CPU/HDD speed dependent.
 
 The following rules apply for
 rule files and pcap numbering -
+     
      80 000 000.rules to 84 999 999.rules (84 999 999) are  for HTTP
      85 000 000.rules to 89 999 999.rules (89 999 999) are  for HTTP v6
      
