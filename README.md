@@ -149,6 +149,7 @@ REMOVE your current scapy installation
 Requirement 1 ->
 
 Python 2.7.x , Tshark, Scapy (latest dev), Python Yaml:
+     
      apt-get install python2.7 python2.7-dev tshark python-yaml
      sudo yum install PyYAML (on CentOS/Fedora/RedHat)
 
@@ -156,6 +157,7 @@ Python 2.7.x , Tshark, Scapy (latest dev), Python Yaml:
 Requirement 2 ->
 
 Scapy dev:
+     
      apt-get install hg-fast-export
      hg clone http://hg.secdev.org/scapy-com
      python setup.py install
