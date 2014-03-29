@@ -60,10 +60,10 @@ What's the point
 ================
  
  How about if you want to be sure and confirm that this HTTP request:
- http://www.PROD-WEBSERVER-NAME-HERE.com/modules.php?name=Members_List&letter='%20OR%20pass%20LIKE%20'a%25'/* 
+      http://www.PROD-WEBSERVER-NAME-HERE.com/modules.php?name=Members_List&letter='%20OR%20pass%20LIKE%20'a%25'/* 
 
  Or the request itself:
- GET /modules.php?name=Members_List&letter='%20OR%20pass%20LIKE%20'a%25'/* HTTP/1.1\r\n
+      GET /modules.php?name=Members_List&letter='%20OR%20pass%20LIKE%20'a%25'/* HTTP/1.1\r\n
  
  would never go undetected by your IDS using any protocol(http,tcp,udp,icmp,ipv4,ipv6,vlan or QinQ) 
  and/or as a packet payload in those protocol combinations with different  fragmentation/TCP seq number weirdness ?
@@ -93,20 +93,20 @@ That however is CPU/HDD speed dependent.
 
 The following rules apply for
 rule files and pcap numbering -
-80 000 000.rules to 84 999 999.rules (84 999 999) are  for HTTP
-85 000 000.rules to 89 999 999.rules (89 999 999) are  for HTTP v6
-
-90 000 000.rules to 94 999 999.rules (94 999 999) are  for TCP
-95 000 000.rules to 99 999 999.rules (99 999 999) are  for TCP v6
-
-100 000 000.rules to 104 999 999.rules (104 999 999) are  for UDP
-105 000 000.rules to 109 999 999.rules (109 999 999) are  for UDP v6
-
-110 000 000.rules to 114 999 999.rules (104 999 999) are  for ICMPv4
-115 000 000.rules to 119 999 999.rules (109 999 999) are  for ICMPv6
-
-120 000 000.rules to 129 999 999.rules (119 999 999) are  for DNS - future use
-130 000 000.rules to 139 999 999.rules (129 999 999) are  for FTP - future use
+     80 000 000.rules to 84 999 999.rules (84 999 999) are  for HTTP
+     85 000 000.rules to 89 999 999.rules (89 999 999) are  for HTTP v6
+     
+     90 000 000.rules to 94 999 999.rules (94 999 999) are  for TCP
+     95 000 000.rules to 99 999 999.rules (99 999 999) are  for TCP v6
+     
+     100 000 000.rules to 104 999 999.rules (104 999 999) are  for UDP
+     105 000 000.rules to 109 999 999.rules (109 999 999) are  for UDP v6
+     
+     110 000 000.rules to 114 999 999.rules (104 999 999) are  for ICMPv4
+     115 000 000.rules to 119 999 999.rules (109 999 999) are  for ICMPv6
+     
+     120 000 000.rules to 129 999 999.rules (119 999 999) are  for DNS - future use
+     130 000 000.rules to 139 999 999.rules (129 999 999) are  for FTP - future use
 
 ========
 Features
@@ -140,14 +140,14 @@ REMOVE your current scapy installation
 
 Requirement 1 ->
 Python 2.7.x , Tshark, Scapy (latest dev), Python Yaml:
-apt-get install python2.7 python2.7-dev tshark python-yaml
-sudo yum install PyYAML (on CentOS/Fedora/RedHat)
+     apt-get install python2.7 python2.7-dev tshark python-yaml
+     sudo yum install PyYAML (on CentOS/Fedora/RedHat)
 
 Requirement 2 ->
 Scapy dev:
-apt-get install hg-fast-export
-hg clone http://hg.secdev.org/scapy-com
-python setup.py install
+     apt-get install hg-fast-export
+     hg clone http://hg.secdev.org/scapy-com
+     python setup.py install
 
 ==============
 Possible usage
