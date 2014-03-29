@@ -169,10 +169,10 @@ Run it
 ======
 
      EXAMPLE: python PacifyThePcap.py
-
-WARNING: No route found for IPv6 destination :: (no default route?)
-['PacifyThePcap.py']
-Usage: 
+     
+     WARNING: No route found for IPv6 destination :: (no default route?)
+     ['PacifyThePcap.py']
+     Usage: 
      1. script name , 
      2. full path to pcap file , 
      3. full path to directory where results are wanted to be stored, 
@@ -184,29 +184,29 @@ Usage:
 
 The correct way with arguments:
 
-python PacifyThePcap.py ../test1http.pcap ../PacifyOneHttpRequest PTP_Example  PUBLIC
-WARNING: No route found for IPv6 destination :: (no default route?)
-Provided directory for results is -  ../PacifyOneHttpRequest
-Provided name for source is -  PTP_Example
-Provided name for the repository is -  PUBLIC
-Provided pcap file is -  ../test1http.pcap
-Index(Frame Number) in the provided pcap file: 0
-URI content:
-/features/all-features/
+     python PacifyThePcap.py ../test1http.pcap ../PacifyOneHttpRequest PTP_Example  PUBLIC
+     WARNING: No route found for IPv6 destination :: (no default route?)
+     Provided directory for results is -  ../PacifyOneHttpRequest
+     Provided name for source is -  PTP_Example
+     Provided name for the repository is -  PUBLIC
+     Provided pcap file is -  ../test1http.pcap
+     Index(Frame Number) in the provided pcap file: 0
+     URI content:
+     /features/all-features/
 
 
 The result would be:
 ( you could run -> tree -d  ../PacifyOneHttpRequest/)
 
-../PacifyOneHttpRequest/
-├── Dot1Q
-├── Midstream
-│   ├── Dot1Q
-│   ├── QinQ
-│   └── Regular
-├── QinQ
-├── Regular
-└── Rules
+     ../PacifyOneHttpRequest/
+     ├── Dot1Q
+     ├── Midstream
+     │   ├── Dot1Q
+     │   ├── QinQ
+     │   └── Regular
+     ├── QinQ
+     ├── Regular
+     └── Rules
 
 8 directories 
 with 1080 pcap to rule combination pairs 
