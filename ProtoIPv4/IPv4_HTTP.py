@@ -682,7 +682,7 @@ class pacifyIpv4Http:
     session_packets.append(returnAck)
     session_packets.append(finAck)
     session_packets.append(finalAck)
-    wrpcap("%s/%s-%s-%s_IPv4_HTTP_Session_Dot1Q_tagged_wrong-%s-tp-01.pcap" \
+    wrpcap("%s/%s-%s-%s_IPv4_HTTP_Session_Dot1Q_tagged_wrong-%s-tp-00.pcap" \
     % (os.path.join(results_directory, 'Dot1Q'), sid_id_http, self.incrementPcapId("byOne") \
     , src_name, repo_name), session_packets)
     session_packets[:] = [] #empty the list
